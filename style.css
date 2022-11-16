@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  --rosa: #FF017E;
+  --amarelo: #FEE300;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--rosa);
+  width: 100%;
+}
+
+.imagem1 {
+  width: 200px;
+  height: 50px;
+}
+
+.imagem2 {
+  width: 38px;
+  height: 35px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title h1 {
+  color: white;
+  font-size: 35px;
+  padding: 0 10px;
+}
+
+.menu {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+  background-color: white;
+
+}
+
+.menu p {
+  font-weight: 700;
+  font-size: large;
+  padding: 0 20px;
+  color: var(--rosa);
+  text-transform: uppercase;
+}
+
+.mid {
+  display: flex;
+}
+
+.mid-head {
+  position: relative;
+  padding: 0;
+  margin: 20px 30px;
+}
+
+#slide {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 40vh;
+  overflow-y: hidden;
+}
+
+#slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+#slide img.imgfocus {
+  opacity: 1;
+  object-fit: cover;
+}
+
+.indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 1em;
+}
+
+.mid-head hr {
+  border: 0;
+  width: 440px;
+  margin-top: 20px;
+  margin-left: calc(50vw - 250px);
+  border-top: 1px solid var(--rosa);
+
+}
+
+.indicadores button {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  width: 3em;
+  height: 1.5em;
+  color: var(--rosa);
+  border: 3px solid var(--rosa);
+  background-color: white;
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.indicadores button:hover {
+  box-sizing: border-box;
+  width: 3em;
+  height: 1.5em;
+  color: white;
+  background-color: var(--rosa);
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.category {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: 700;
+}
+
+.category button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  width: 160px;
+  background-color: white;
+  color: var(--rosa);
+  border-radius: 15px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--rosa);
+  box-shadow: 2px 2px 31px 7px rgba(255, 1, 126, 0.3);
+}
+
+.category button:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  width: 160px;
+  color: white;
+  border-radius: 15px;
+  background-color: var(--rosa);
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cardCategory{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70em;
+  max-height: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.biquinis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3em;
+  gap: 6em;
+  width: 100%;
+  height: 100%;
+}
+
+.maios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3em;
+  gap: 6em;
+  width: 100%;
+  height: 100%;
+}
+
+.saidaPraia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3em;
+  gap: 6em;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22em;
+  height: 30em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 4px 31px 10px rgba(255, 1, 126, 0.3);
+  color: var(--rosa);
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  border-bottom: 4px solid rgba(255, 1, 126, 0.5);
+}
+
+.card:hover {
+  background-color: #ffa8d4;
+}
+
+.carrossel {
+  width: 100%;
+  position: relative;
+  height: 20em;
+  margin: 1em;
+  border-radius: 0.5em;
+  background-color: white;
+}
+
+.carrossel img.active {
+  opacity: 1;
+  object-fit: cover;
+}
+
+.carrossel img {
+  border-radius: 0.5em;
+  border: 1px solid rgba(255, 1, 126, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.card span {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.card p {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
