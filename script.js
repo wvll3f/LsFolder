@@ -80,25 +80,53 @@ function stopMove() {
     clearInterval(intervalo)
 }
 
-let buttonSecond = document.querySelector("#mai");
-let buttonFirst = document.querySelector("#biq");
-let buttonThird = document.querySelector("#sai");
+let buttonSecond = document.querySelector("#mai"),
+    buttonFirst = document.querySelector("#biq"),
+    buttonThird = document.querySelector("#sai");
 
-let categoria = document.querySelector(".cardCategory")
+let categoria = document.querySelector(".cardCategory"),
+    posiCategoria = categoria.getBoundingClientRect();
 
-let coordenadas = categoria.getBoundingClientRect()
-console.log(coordenadas) 
+console.log(posiCategoria);
 
-function moveEixoY() {
+let posBiquini = document.querySelector(".biquinis").getBoundingClientRect(),
+    posMaio = document.querySelector(".maios").getBoundingClientRect(),
+    posSaida = document.querySelector(".saidaPraia").getBoundingClientRect();
 
-    console.log(coordenadas)
-    
+//console.log(posBiquini)
+//console.log(posMaio)
+//console.log(posSaida)
+
+function moveBiquini() {
+
+    if (posiCategoria.top > 0) {
+        categoria.scrollBy({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        console.log("já esta na posição");
+    }
+}
+
+function moveMaio() {
+
     categoria.scrollBy({
         top: 1100,
         behavior: 'smooth'
-      });
-
+    });
+    console.log(posiCategoria);
 }
+
+function moveSaida() {
+
+    categoria.scrollBy({
+        top: 2200,
+        behavior: 'smooth'
+    });
+    console.log(posiCategoria);
+}
+
 window.addEventListener('load', start)
 
 
