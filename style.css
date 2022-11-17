@@ -177,7 +177,7 @@
   font-weight: 700;
   text-transform: uppercase;
   border-bottom: 2px solid var(--rosa);
-  box-shadow: 1px 1px 10px 7px rgba(255, 1, 126, 0.3);
+  box-shadow: 0.5px 0px 12px 0px rgba(255, 1, 126, 0.2);
 }
 
 .category button:hover {
@@ -260,6 +260,10 @@
 
 .card:hover {
   background-color: #ffa8d4;
+}
+
+#card-div{
+  margin-top: 50px;
 }
 
 .carrossel {
