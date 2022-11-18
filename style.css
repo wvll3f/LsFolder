@@ -250,7 +250,7 @@
   width: 22em;
   height: 30em;
   background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 10px 7px rgba(255, 1, 126, 0.3);
+  box-shadow: 1px 1px 10px 7px rgba(255, 1, 126, 0.15);
   color: var(--rosa);
   border-radius: 0.5em;
   padding: 1em;
