@@ -1,4 +1,4 @@
-import {biquinis,maios,saidas} from './assets/products.js';
+import { biquinis, maios, saidas } from './assets/products.js';
 
 //Slide inicial de Banners
 //Variaveis utilizadas
@@ -93,6 +93,18 @@ function minhaFuncao(e) {
 function stopMove() {
     clearInterval(intervalo)
 }
+
+
+const divCategory = document.querySelector('.cardCategory')
+
+biq.forEach(() => {
+
+    const divBiquinis = document.createElement('div')
+    divBiquinis.classList.add('card')
+    divBiquinis.textContent = biq[0].name
+
+    divCategory.appendChild(divBiquinis)
+})
 
 
 window.addEventListener('load', start)
