@@ -73,6 +73,7 @@ let intervalo;
 
 //Função de slide de imagens dos produtos
 function minhaFuncao(e) {
+    /*
     let limit = e.children.length;
 
     intervalo = setInterval(() => {
@@ -86,6 +87,8 @@ function minhaFuncao(e) {
 
         e.children[indexC].classList.add("active")
     }, timeMove);
+*/
+    console.log('emcima')
 
 }
 
@@ -96,14 +99,26 @@ function stopMove() {
 
 
 const divCategory = document.querySelector('.cardCategory')
-
+var indexNow = 0;
 biq.forEach(() => {
-
+    
     const divBiquinis = document.createElement('div')
-    divBiquinis.classList.add('card')
-    divBiquinis.textContent = biq[0].name
+    const divCarrossel = document.createElement('div')
 
+        divCarrossel.classList.add('carrosel')
+            divCarrossel.setAttribute = ("onmouseover", "minhaFuncao(this)")
+                divBiquinis.classList.add('card')
+                    divBiquinis.textContent = biq[indexNow].name
+
+    divBiquinis.appendChild(divCarrossel)
     divCategory.appendChild(divBiquinis)
+
+    indexNow++
+})
+
+const divCarrossel = document.querySelectorAll('carrosel')
+divCarrossel.forEach( () =>{
+    divCarrossel.setAttribute = ("onmouseover", "minhaFuncao(this)")
 })
 
 
