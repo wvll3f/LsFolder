@@ -1,0 +1,302 @@
+                        <div class="biquinis">
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card2" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Alice</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card3" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Jana</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card4" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Mary</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card5" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Mary</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card6" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Mary</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card7" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Mary</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card8" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/b1.webp" alt="">
+                                    <img src="/images/b2.webp" alt="">
+                                    <img src="./images/b3.webp" alt="">
+                                </div>
+                                <span> Biquini Mary</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+                        </div>
+
+                        <div class="maios">
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Maio 1.webp" alt="">
+                                    <img src="/images/Maio 2.webp" alt="">
+                                    <img src="./images/Maio 3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="saidaPraia">
+
+                            <div class="card" id="card-div">
+                                <div class="carrossel" id="card1" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card" id="card-div">
+                                <div class="carrossel" id="card2" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card" id="card-div">
+                                <div class="carrossel" id="card3" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card" id="card-div">
+                                <div class="carrossel" id="card4" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card5" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card6" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card7" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="carrossel" id="card8" onmouseover="minhaFuncao(this)"
+                                    onmouseout="stopMove()">
+                                    <img class="active" src="./images/Saida1.webp" alt="">
+                                    <img src="/images/Saida2.webp" alt="">
+                                    <img src="./images/Saida3.webp" alt="">
+                                </div>
+                                <span> Biquini Livia</span>
+                                <p>Disponivel</p>
+                                <p> P M G</p>
+                            </div>
+                        </div>
+
+                        

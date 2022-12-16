@@ -1,13 +1,20 @@
+import {biquinis,maios,saidas} from './assets/products.js';
 
 //Slide inicial de Banners
 //Variaveis utilizadas
+const biq = biquinis;
+const mai = maios;
+const sai = saidas;
+
+console.log(biquinis)
+
 let time = 3000,
     indexC = 0,
     currentImageIndex = 0,
     imagens = document.querySelectorAll("#slide img"),
     max = imagens.length;
 
-    //Função que inicia o slide
+//Função que inicia o slide
 function start() {
     setInterval(() => {
         nextImage()
@@ -82,61 +89,11 @@ function minhaFuncao(e) {
 
 }
 
-console.log(intervalo)
-
 //Para o slide do produto
 function stopMove() {
     clearInterval(intervalo)
 }
 
-//Aréa de seleção das categorias de produtos
-let buttonSecond = document.querySelector("#mai"),
-    buttonFirst = document.querySelector("#biq"),
-    buttonThird = document.querySelector("#sai");
-
-let categoria = document.querySelector(".cardCategory"),
-    posiCategoria = categoria.getBoundingClientRect();
-
-console.log(posiCategoria);
-
-let posBiquini = document.querySelector(".biquinis").getBoundingClientRect(),
-    posMaio = document.querySelector(".maios").getBoundingClientRect(),
-    posSaida = document.querySelector(".saidaPraia").getBoundingClientRect();
-
-//console.log(posBiquini)
-//console.log(posMaio)
-//console.log(posSaida)
-
-//seleção da categoria de biquini
-function moveBiquini() {
-
-        categoria.scrollBy({
-            top: -2260,
-            behavior: 'smooth'
-        });
-    
-}
-console.log(categoria.DOCUMENT_POSITION_CONTAINED_BY)
-
-//seleção da categoria de Maio
-function moveMaio() {
-
-    categoria.scrollBy({
-        top: 1120,
-        behavior: 'smooth'
-    });
-    console.log(posiCategoria);
-}
-
-//seleção da categoria de Saida de praia
-function moveSaida() {
-
-    categoria.scrollBy({
-        top: 2260,
-        behavior: 'smooth'
-    });
-    console.log(posiCategoria);
-}
 
 window.addEventListener('load', start)
 
