@@ -66,7 +66,7 @@ function bfrButton() {
 }
 
 // Area de funções relacionados aos produtos
-let timeMove = 1500;
+let timeMove = 1000;
 let intervalo;
 
 //Função de slide de imagens dos produtos
@@ -93,10 +93,14 @@ function stopMove() {
 }
 
 const divCategory = document.querySelector('.cardCategory')
-var indexNow = 0;
+const divGeral = document.createElement('div')
+divGeral.classList.add('Biquinis')
+divCategory.appendChild(divGeral)
+var indexBiq = 0;
 
 //Criação da categoria de biquinis
 biq.forEach(() => {
+
     
     const divBiquinis = document.createElement('div')
     const divCarrossel = document.createElement('div')
@@ -107,16 +111,19 @@ biq.forEach(() => {
     const p2 = document.createElement('p')
 
     divCarrossel.classList.add('carrossel')
+    divCarrossel.setAttribute('id','carrossel-biquini')
     divCarrossel.onmouseover = function () { minhaFuncao(this) }
     divCarrossel.onmouseout = function () { stopMove() }
+    
     divBiquinis.classList.add('card')
-    let text = document.createTextNode( biq[indexNow].sizes)
-    let text2 = document.createTextNode( biq[indexNow].name)
+    divBiquinis.setAttribute('id','card-biquini')
+    let text = document.createTextNode(biq[indexBiq].sizes)
+    let text2 = document.createTextNode(biq[indexBiq].name)
 
     img.classList.add('active')
-    img.setAttribute('src', biq[indexNow].imgs[0].endereço)
-    img2.setAttribute('src', biq[indexNow].imgs[1].endereço)
-    img3.setAttribute('src', biq[indexNow].imgs[2].endereço)
+    img.setAttribute('src', biq[indexBiq].imgs[0].endereço)
+    img2.setAttribute('src', biq[indexBiq].imgs[1].endereço)
+    img3.setAttribute('src', biq[indexBiq].imgs[2].endereço)
 
 
     span.appendChild(text2)
@@ -128,13 +135,18 @@ biq.forEach(() => {
     divCarrossel.appendChild(img3)
     divBiquinis.appendChild(divCarrossel)
     divCategory.appendChild(divBiquinis)
-
-    indexNow++
+    divGeral.append(divBiquinis)
+    
+    indexBiq++
 })
 
+let divBiquinis = document.querySelectorAll('div-biquini')
 //Criação da categoria de Maios
+
+var indexMai = 0;
 mai.forEach(() => {
 
+    console.log(indexSai)
     const divMaios = document.createElement('div')
     const divCarrossel = document.createElement('div')
     const img = document.createElement('img')
@@ -147,13 +159,13 @@ mai.forEach(() => {
     divCarrossel.onmouseover = function () { minhaFuncao(this) }
     divCarrossel.onmouseout = function () { stopMove() }
     divMaios.classList.add('card')
-    let text = document.createTextNode( mai[indexNow].sizes)
-    let text2 = document.createTextNode( mai[indexNow].name)
+    let text = document.createTextNode(mai[indexMai].sizes)
+    let text2 = document.createTextNode(mai[indexMai].name)
 
     img.classList.add('active')
-    img.setAttribute('src', mai[indexNow].imgs[0].endereço)
-    img2.setAttribute('src', mai[indexNow].imgs[1].endereço)
-    img3.setAttribute('src', mai[indexNow].imgs[2].endereço)
+    img.setAttribute('src', mai[indexMai].imgs[0].endereço)
+    img2.setAttribute('src', mai[indexMai].imgs[1].endereço)
+    img3.setAttribute('src', mai[indexMai].imgs[2].endereço)
 
 
     span.appendChild(text2)
@@ -165,10 +177,11 @@ mai.forEach(() => {
     divCarrossel.appendChild(img3)
     divMaios.appendChild(divCarrossel)
     divCategory.appendChild(divMaios)
-
-    indexNow++
+    
+    indexMai++
 })
 
+var indexSai = 0;
 //Criação da categoria de Saidas de praia
 sai.forEach(() => {
 
@@ -184,13 +197,13 @@ sai.forEach(() => {
     divCarrossel.onmouseover = function () { minhaFuncao(this) }
     divCarrossel.onmouseout = function () { stopMove() }
     divSaidas.classList.add('card')
-    let text = document.createTextNode( sai[indexNow].sizes)
-    let text2 = document.createTextNode( sai[indexNow].name)
+    let text = document.createTextNode(sai[indexSai].sizes)
+    let text2 = document.createTextNode(sai[indexSai].name)
 
     img.classList.add('active')
-    img.setAttribute('src', sai[indexNow].imgs[0].endereço)
-    img2.setAttribute('src', sai[indexNow].imgs[1].endereço)
-    img3.setAttribute('src', sai[indexNow].imgs[2].endereço)
+    img.setAttribute('src', sai[indexSai].imgs[0].endereço)
+    img2.setAttribute('src', sai[indexSai].imgs[1].endereço)
+    img3.setAttribute('src', sai[indexSai].imgs[2].endereço)
 
 
     span.appendChild(text2)
@@ -203,8 +216,20 @@ sai.forEach(() => {
     divSaidas.appendChild(divCarrossel)
     divCategory.appendChild(divSaidas)
 
-    indexNow++
+    indexSai++
 })
+
+//funções de seleção de botões
+let btBiquini = document.querySelector('#biq'),
+    btMaio = document.querySelector('#mai'),
+    btSaida = document.querySelector('#sai');
+
+btMaio.onclick = function () { moveMaio() }
+let biquiniEl = document.querySelector('.Biquini')
+console.log(biquiniEl);
+    function moveMaio(){
+    biquiniEl.style.display = 'none';
+    }
 
 window.addEventListener('load', start)
 
