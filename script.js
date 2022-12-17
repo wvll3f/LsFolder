@@ -1,13 +1,11 @@
 import { biquinis, maios, saidas } from './assets/products.js';
 
-//Slide inicial de Banners
 //Variaveis utilizadas
 const biq = biquinis;
 const mai = maios;
 const sai = saidas;
 
-console.log(biquinis)
-
+//Slide inicial de Banners
 let time = 3000,
     indexC = 0,
     currentImageIndex = 0,
@@ -73,7 +71,6 @@ let intervalo;
 
 //Função de slide de imagens dos produtos
 function minhaFuncao(e) {
-    /*
     let limit = e.children.length;
 
     intervalo = setInterval(() => {
@@ -87,8 +84,6 @@ function minhaFuncao(e) {
 
         e.children[indexC].classList.add("active")
     }, timeMove);
-*/
-    console.log('emcima')
 
 }
 
@@ -97,30 +92,119 @@ function stopMove() {
     clearInterval(intervalo)
 }
 
-
 const divCategory = document.querySelector('.cardCategory')
 var indexNow = 0;
+
+//Criação da categoria de biquinis
 biq.forEach(() => {
     
     const divBiquinis = document.createElement('div')
     const divCarrossel = document.createElement('div')
+    const img = document.createElement('img')
+    const img2 = document.createElement('img')
+    const img3 = document.createElement('img')
+    const span = document.createElement('span')
+    const p2 = document.createElement('p')
 
-        divCarrossel.classList.add('carrosel')
-            divCarrossel.setAttribute = ("onmouseover", "minhaFuncao(this)")
-                divBiquinis.classList.add('card')
-                    divBiquinis.textContent = biq[indexNow].name
+    divCarrossel.classList.add('carrossel')
+    divCarrossel.onmouseover = function () { minhaFuncao(this) }
+    divCarrossel.onmouseout = function () { stopMove() }
+    divBiquinis.classList.add('card')
+    let text = document.createTextNode( biq[indexNow].sizes)
+    let text2 = document.createTextNode( biq[indexNow].name)
 
+    img.classList.add('active')
+    img.setAttribute('src', biq[indexNow].imgs[0].endereço)
+    img2.setAttribute('src', biq[indexNow].imgs[1].endereço)
+    img3.setAttribute('src', biq[indexNow].imgs[2].endereço)
+
+
+    span.appendChild(text2)
+    p2.appendChild(text)
+    divBiquinis.appendChild(span)
+    divBiquinis.appendChild(p2)
+    divCarrossel.appendChild(img)
+    divCarrossel.appendChild(img2)
+    divCarrossel.appendChild(img3)
     divBiquinis.appendChild(divCarrossel)
     divCategory.appendChild(divBiquinis)
 
     indexNow++
 })
 
-const divCarrossel = document.querySelectorAll('carrosel')
-divCarrossel.forEach( () =>{
-    divCarrossel.setAttribute = ("onmouseover", "minhaFuncao(this)")
+//Criação da categoria de Maios
+mai.forEach(() => {
+
+    const divMaios = document.createElement('div')
+    const divCarrossel = document.createElement('div')
+    const img = document.createElement('img')
+    const img2 = document.createElement('img')
+    const img3 = document.createElement('img')
+    const span = document.createElement('span')
+    const p2 = document.createElement('p')
+
+    divCarrossel.classList.add('carrossel')
+    divCarrossel.onmouseover = function () { minhaFuncao(this) }
+    divCarrossel.onmouseout = function () { stopMove() }
+    divMaios.classList.add('card')
+    let text = document.createTextNode( mai[indexNow].sizes)
+    let text2 = document.createTextNode( mai[indexNow].name)
+
+    img.classList.add('active')
+    img.setAttribute('src', mai[indexNow].imgs[0].endereço)
+    img2.setAttribute('src', mai[indexNow].imgs[1].endereço)
+    img3.setAttribute('src', mai[indexNow].imgs[2].endereço)
+
+
+    span.appendChild(text2)
+    p2.appendChild(text)
+    divMaios.appendChild(span)
+    divMaios.appendChild(p2)
+    divCarrossel.appendChild(img)
+    divCarrossel.appendChild(img2)
+    divCarrossel.appendChild(img3)
+    divMaios.appendChild(divCarrossel)
+    divCategory.appendChild(divMaios)
+
+    indexNow++
 })
 
+//Criação da categoria de Saidas de praia
+sai.forEach(() => {
+
+    const divSaidas = document.createElement('div')
+    const divCarrossel = document.createElement('div')
+    const img = document.createElement('img')
+    const img2 = document.createElement('img')
+    const img3 = document.createElement('img')
+    const span = document.createElement('span')
+    const p2 = document.createElement('p')
+
+    divCarrossel.classList.add('carrossel')
+    divCarrossel.onmouseover = function () { minhaFuncao(this) }
+    divCarrossel.onmouseout = function () { stopMove() }
+    divSaidas.classList.add('card')
+    let text = document.createTextNode( sai[indexNow].sizes)
+    let text2 = document.createTextNode( sai[indexNow].name)
+
+    img.classList.add('active')
+    img.setAttribute('src', sai[indexNow].imgs[0].endereço)
+    img2.setAttribute('src', sai[indexNow].imgs[1].endereço)
+    img3.setAttribute('src', sai[indexNow].imgs[2].endereço)
+
+
+    span.appendChild(text2)
+    p2.appendChild(text)
+    divSaidas.appendChild(span)
+    divSaidas.appendChild(p2)
+    divCarrossel.appendChild(img)
+    divCarrossel.appendChild(img2)
+    divCarrossel.appendChild(img3)
+    divSaidas.appendChild(divCarrossel)
+    divCategory.appendChild(divSaidas)
+
+    indexNow++
+})
 
 window.addEventListener('load', start)
 
