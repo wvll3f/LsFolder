@@ -1,16 +1,20 @@
 import { biquinis, maios, saidas } from './assets/products.js';
 
 //Variaveis utilizadas
-const biq = biquinis;
-const mai = maios;
-const sai = saidas;
+const biquini = biquinis;
+const maio = maios;
+const saida = saidas;
+
 
 //Slide inicial de Banners
 let time = 3000,
     indexC = 0,
     currentImageIndex = 0,
     imagens = document.querySelectorAll("#slide img"),
-    max = imagens.length;
+    max = imagens.length,
+    biqValue = false,
+    maiValue = false,
+    saiValue = false;
 
 //Função que inicia o slide
 function start() {
@@ -88,149 +92,100 @@ function minhaFuncao(e) {
 }
 
 //Para o slide do produto
-function stopMove() {
+function stopMove(e) {
     clearInterval(intervalo)
 }
 
-const divCategory = document.querySelector('.cardCategory')
-const divGeral = document.createElement('div')
-divGeral.classList.add('Biquinis')
-divCategory.appendChild(divGeral)
-var indexBiq = 0;
+function moveBiquini() {
 
-//Criação da categoria de biquinis
-biq.forEach(() => {
+    renderProducts(biquini)
+    saiValue = false;
+    maiValue = false;
+    biqValue = true;
 
-    
-    const divBiquinis = document.createElement('div')
-    const divCarrossel = document.createElement('div')
-    const img = document.createElement('img')
-    const img2 = document.createElement('img')
-    const img3 = document.createElement('img')
-    const span = document.createElement('span')
-    const p2 = document.createElement('p')
-
-    divCarrossel.classList.add('carrossel')
-    divCarrossel.setAttribute('id','carrossel-biquini')
-    divCarrossel.onmouseover = function () { minhaFuncao(this) }
-    divCarrossel.onmouseout = function () { stopMove() }
-    
-    divBiquinis.classList.add('card')
-    divBiquinis.setAttribute('id','card-biquini')
-    let text = document.createTextNode(biq[indexBiq].sizes)
-    let text2 = document.createTextNode(biq[indexBiq].name)
-
-    img.classList.add('active')
-    img.setAttribute('src', biq[indexBiq].imgs[0].endereço)
-    img2.setAttribute('src', biq[indexBiq].imgs[1].endereço)
-    img3.setAttribute('src', biq[indexBiq].imgs[2].endereço)
+    let listaMaios = document.querySelectorAll('#cardmaio').forEach((e) => {
+        e.remove();
+    })
+    let listaSaidas = document.querySelectorAll('#cardSaida de praia').forEach((e) => {
+        e.remove();
+    })
 
 
-    span.appendChild(text2)
-    p2.appendChild(text)
-    divBiquinis.appendChild(span)
-    divBiquinis.appendChild(p2)
-    divCarrossel.appendChild(img)
-    divCarrossel.appendChild(img2)
-    divCarrossel.appendChild(img3)
-    divBiquinis.appendChild(divCarrossel)
-    divCategory.appendChild(divBiquinis)
-    divGeral.append(divBiquinis)
-    
-    indexBiq++
+}
+function moveMaio() {
+
+    renderProducts(maio)
+
+    saiValue = false;
+    biqValue = false;
+    maiValue = true;
+
+    let listaBiquinis = document.querySelectorAll('#cardbiquini').forEach((e) => {
+        e.remove();
+    })
+    let listaSaidas = document.querySelectorAll('#cardSaida de praia').forEach((e) => {
+        e.remove();
+    })
+
+}
+function moveSaida() {
+
+    renderProducts(saida)
+    biqValue = false;
+    maiValue = false;
+    saiValue = true;
+
+    let listaBiquinis = document.querySelectorAll('#cardbiquini').forEach((e) => {
+        e.remove();
+    })
+    let listaSaidas = document.querySelectorAll('#cardmaio').forEach((e) => {
+        e.remove();
+    })
+}
+
+let btBiquini = document.querySelector('#biq')
+btBiquini.addEventListener("click", function () { moveBiquini() });
+
+let btMaio = document.querySelector('#mai')
+btMaio.addEventListener("click", function () { moveMaio() });
+
+let btSaida = document.querySelector('#sai')
+btSaida.addEventListener("click", function () { moveSaida() });
+
+
+
+const listaProdutos = document.querySelector('.cardCategory')
+function renderProducts(product) {
+    let categProducts = '';
+    let index = 1;
+
+    product.forEach((product, id) => {
+        categProducts += `
+            <div class="card" id= "card${product.type}">
+            <div class="carrossel" id="${product.type}${product.id.toString()}">
+                <img class="active" src="${product.imgs[0].endereço}" alt="">
+                <img src="${product.imgs[1].endereço}" alt="">
+                <img src="${product.imgs[2].endereço}" alt="">
+            </div>
+            <span> ${product.name}</span>
+            <p>Disponivel</p>
+            <p> P M G</p>
+        </div> 
+            `
+    })
+
+    index++
+    listaProdutos.innerHTML = categProducts;
+    let divCarrossel = document.querySelectorAll('.carrossel')
+divCarrossel.forEach((e) => {
+    e.onmouseover = function () { minhaFuncao(this) }
+    e.onmouseout = function () { stopMove() }
 })
+}
 
-let divBiquinis = document.querySelectorAll('div-biquini')
-//Criação da categoria de Maios
-
-var indexMai = 0;
-mai.forEach(() => {
-
-    console.log(indexSai)
-    const divMaios = document.createElement('div')
-    const divCarrossel = document.createElement('div')
-    const img = document.createElement('img')
-    const img2 = document.createElement('img')
-    const img3 = document.createElement('img')
-    const span = document.createElement('span')
-    const p2 = document.createElement('p')
-
-    divCarrossel.classList.add('carrossel')
-    divCarrossel.onmouseover = function () { minhaFuncao(this) }
-    divCarrossel.onmouseout = function () { stopMove() }
-    divMaios.classList.add('card')
-    let text = document.createTextNode(mai[indexMai].sizes)
-    let text2 = document.createTextNode(mai[indexMai].name)
-
-    img.classList.add('active')
-    img.setAttribute('src', mai[indexMai].imgs[0].endereço)
-    img2.setAttribute('src', mai[indexMai].imgs[1].endereço)
-    img3.setAttribute('src', mai[indexMai].imgs[2].endereço)
-
-
-    span.appendChild(text2)
-    p2.appendChild(text)
-    divMaios.appendChild(span)
-    divMaios.appendChild(p2)
-    divCarrossel.appendChild(img)
-    divCarrossel.appendChild(img2)
-    divCarrossel.appendChild(img3)
-    divMaios.appendChild(divCarrossel)
-    divCategory.appendChild(divMaios)
-    
-    indexMai++
-})
-
-var indexSai = 0;
-//Criação da categoria de Saidas de praia
-sai.forEach(() => {
-
-    const divSaidas = document.createElement('div')
-    const divCarrossel = document.createElement('div')
-    const img = document.createElement('img')
-    const img2 = document.createElement('img')
-    const img3 = document.createElement('img')
-    const span = document.createElement('span')
-    const p2 = document.createElement('p')
-
-    divCarrossel.classList.add('carrossel')
-    divCarrossel.onmouseover = function () { minhaFuncao(this) }
-    divCarrossel.onmouseout = function () { stopMove() }
-    divSaidas.classList.add('card')
-    let text = document.createTextNode(sai[indexSai].sizes)
-    let text2 = document.createTextNode(sai[indexSai].name)
-
-    img.classList.add('active')
-    img.setAttribute('src', sai[indexSai].imgs[0].endereço)
-    img2.setAttribute('src', sai[indexSai].imgs[1].endereço)
-    img3.setAttribute('src', sai[indexSai].imgs[2].endereço)
-
-
-    span.appendChild(text2)
-    p2.appendChild(text)
-    divSaidas.appendChild(span)
-    divSaidas.appendChild(p2)
-    divCarrossel.appendChild(img)
-    divCarrossel.appendChild(img2)
-    divCarrossel.appendChild(img3)
-    divSaidas.appendChild(divCarrossel)
-    divCategory.appendChild(divSaidas)
-
-    indexSai++
-})
-
-//funções de seleção de botões
-let btBiquini = document.querySelector('#biq'),
-    btMaio = document.querySelector('#mai'),
-    btSaida = document.querySelector('#sai');
-
-btMaio.onclick = function () { moveMaio() }
-let biquiniEl = document.querySelector('.Biquini')
-console.log(biquiniEl);
-    function moveMaio(){
-    biquiniEl.style.display = 'none';
-    }
+renderProducts(biquini)
 
 window.addEventListener('load', start)
+
 
 
