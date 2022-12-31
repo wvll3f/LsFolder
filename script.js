@@ -96,6 +96,7 @@ function stopMove(e) {
     clearInterval(intervalo)
 }
 
+//funções de render dos botões
 function moveBiquini() {
 
     renderProducts(biquini)
@@ -143,6 +144,7 @@ function moveSaida() {
     })
 }
 
+//Atrelando evento onclick e função de render nos botões.
 let btBiquini = document.querySelector('#biq')
 btBiquini.addEventListener("click", function () { moveBiquini() });
 
@@ -153,15 +155,16 @@ let btSaida = document.querySelector('#sai')
 btSaida.addEventListener("click", function () { moveSaida() });
 
 
-
+//Selecionando div dos protudos
 const listaProdutos = document.querySelector('.cardCategory')
+//Função de controle de renderização de objetos
 function renderProducts(product) {
     let categProducts = '';
-    let index = 1;
+    let index = '';
 
     product.forEach((product, id) => {
         categProducts += `
-            <div class="card" id= "card${product.type}">
+            <div class="card" id= "card${product.type}${id}">
             <div class="carrossel" id="${product.type}${product.id.toString()}">
                 <img class="active" src="${product.imgs[0].endereço}" alt="">
                 <img src="${product.imgs[1].endereço}" alt="">
@@ -182,9 +185,10 @@ divCarrossel.forEach((e) => {
     e.onmouseout = function () { stopMove() }
 })
 }
-
+//renderizando o produto inicial
 renderProducts(biquini)
 
+//startando o slide de banners.
 window.addEventListener('load', start)
 
 

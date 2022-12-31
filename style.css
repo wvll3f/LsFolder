@@ -196,14 +196,14 @@
   text-transform: uppercase;
 }
 
-.cardCategory{
+.cardCategory {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 4em;
+  margin-top: 5em;
   flex-wrap: wrap;
   width: 100%;
-  height: 70em;
+  height: 75em;
   max-height: 100%;
   overflow-y: hidden;
   position: relative;
@@ -212,7 +212,7 @@
 
 .Biquinis {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   margin-top: 4em;
   flex-wrap: wrap;
@@ -262,13 +262,15 @@
   padding: 1em;
   cursor: pointer;
   border-bottom: 4px solid rgba(255, 1, 126, 0.5);
+  border-top: 4px solid rgba(255, 1, 126, 0.5);
 }
 
 .card:hover {
   background-color: #ffa8d4;
+  color: white;
 }
 
-#card-div{
+#card-div {
   margin-top: 50px;
 }
 
@@ -306,4 +308,106 @@
   margin: 0;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.product-shop {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  height: 50rem;
+  gap: 5rem;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 1px 1px 35px 10px rgba(255, 1, 126,0.1);
+  border-bottom: 3px solid rgba(255, 1, 126, 0.5);
+  border-top: 3px solid rgba(255, 1, 126, 0.5);
+}
+
+.img-product-shop {
+  display: flex;
+  flex: 1;
+}
+
+.img-product-shop img {
+  margin: 5em 5em;
+  height: 40rem;
+  border-radius: 3em 0 3em 0;
+}
+
+.description {
+  flex: 1;
+  margin: 5em 5em;
+}
+
+.description h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--rosa);
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  color: var(--rosa);
+}
+
+.description img {
+  height: 5em;
+  width: 5em;
+  object-fit: cover;
+  margin-top: 3em;
+  margin-right: 2em;
+}
+
+.description img:hover{
+  border: 1px solid rgba(255, 1, 126, 1);
+}
+
+.tamanhos{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.tamanhos h2{
+  font-size: 1.8em;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid #FF017E;
+  cursor: pointer;
+}
+
+.tamanhos h2:hover{
+  background-color: var(--rosa);
+  color: white;
+}
+
+.description button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3em;
+  height: 3em;
+  width: 14em;
+  background-color: white;
+  color: var(--rosa);
+  border-radius: 15px;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--rosa);
+  box-shadow: 0.5px 0px 12px 0px rgba(255, 1, 126, 0.2);
+}
+
+.description button:hover{
+  background-color: var(--rosa);
+  color: white;
 }
