@@ -155,6 +155,51 @@ let btSaida = document.querySelector('#sai')
 btSaida.addEventListener("click", function () { moveSaida() });
 
 
+const corpo = document.querySelector('body')
+const modalBody = document.querySelector('.main')
+
+function renderShop(product) {
+    let selecionado = ''
+
+    if (product.children[4].classList == 'biquini') {
+         selecionado = biquini.find(e => e.id = product.id)
+    } else if (product.children[4].classList == 'maio'){
+         selecionado = maio.find(e => e.id = product.id)
+    }else if (product.children[4].classList == 'Saida de praia'){
+         selecionado = saida.find(e => e.id = product.id)
+    }
+
+    let h1 = document.querySelector('#nome').innerHTML = selecionado.name;
+    let imgPrincipal = document.querySelector('#imgPrincipal').setAttribute('src', selecionado.imgs[0].endereço);
+    let img1 = document.querySelector('#img-shop-one').setAttribute('src', selecionado.imgs[0].endereço);
+    let img2 = document.querySelector('#img-shop-two').setAttribute('src', selecionado.imgs[0].endereço);
+    let img3 = document.querySelector('#img-shop-three').setAttribute('src', selecionado.imgs[0].endereço);
+    let modal = document.querySelector('.modal-div').style.display = 'flex'
+    modalBody.style.display = 'none'
+
+    let btClose = document.querySelector('.bt-close')
+    btClose.addEventListener("click", function () { closeModal() });
+
+    let tamanhos = document.querySelectorAll(".description h2").forEach(element => {
+        element.addEventListener("click", function () { colorSel(this) });
+    }); 
+}
+
+function colorSel(element){
+    let tamanhos = document.querySelectorAll(".description h2").forEach( e =>{
+        e.style.backgroundColor ='white'
+        e.style.color ='#FF017E'
+    })
+
+    element.style.backgroundColor ='#FF017E'
+    element.style.color ='white'
+}
+
+function closeModal() {
+    let modal = document.querySelector('.modal-div').style.display = 'none'
+    modalBody.style.display = 'flex'
+}
+
 //Selecionando div dos protudos
 const listaProdutos = document.querySelector('.cardCategory')
 //Função de controle de renderização de objetos
@@ -163,8 +208,9 @@ function renderProducts(product) {
     let index = '';
 
     product.forEach((product, id) => {
+        id = product.id;
         categProducts += `
-            <div class="card" id= "card${product.type}${id}">
+            <div class="card ${product.type}" id="${id}">
             <div class="carrossel" id="${product.type}${product.id.toString()}">
                 <img class="active" src="${product.imgs[0].endereço}" alt="">
                 <img src="${product.imgs[1].endereço}" alt="">
@@ -173,17 +219,24 @@ function renderProducts(product) {
             <span> ${product.name}</span>
             <p>Disponivel</p>
             <p> P M G</p>
+            <div class="${product.type}"></div> 
         </div> 
             `
     })
 
     index++
     listaProdutos.innerHTML = categProducts;
+
+    let divCard = document.querySelectorAll('.card')
+    divCard.forEach((e) => {
+        e.addEventListener("click", function () { renderShop(this) });
+    })
+
     let divCarrossel = document.querySelectorAll('.carrossel')
-divCarrossel.forEach((e) => {
-    e.onmouseover = function () { minhaFuncao(this) }
-    e.onmouseout = function () { stopMove() }
-})
+    divCarrossel.forEach((e) => {
+        e.onmouseover = function () { minhaFuncao(this) }
+        e.onmouseout = function () { stopMove() }
+    })
 }
 //renderizando o produto inicial
 renderProducts(biquini)

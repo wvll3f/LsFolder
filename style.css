@@ -10,11 +10,10 @@
 }
 
 .main {
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .header {
@@ -22,7 +21,6 @@
   flex-direction: column;
   text-align: center;
   background-color: var(--rosa);
-  width: 100%;
 }
 
 .imagem1 {
@@ -67,12 +65,15 @@
 
 .mid {
   display: flex;
+  flex-direction: column;
+  height: 80em;
 }
 
 .mid-head {
   position: relative;
   padding: 0;
   margin: 20px 30px;
+  height: 100%;
 }
 
 #slide {
@@ -100,7 +101,7 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 1em;
+  margin-top: 5px;
 }
 
 .mid-head hr {
@@ -109,7 +110,6 @@
   margin-top: 20px;
   margin-left: calc(50vw - 250px);
   border-top: 1px solid var(--rosa);
-
 }
 
 .indicadores button {
@@ -146,19 +146,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0;
+  overflow: auto;
   width: 100%;
+  height: auto;
 }
 
 .category {
-  margin-top: 70px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 100px;
   width: 100%;
+  height: auto;
   text-transform: uppercase;
   font-size: large;
   font-weight: 700;
+  align-items: flex-start;
 }
 
 .category button {
@@ -178,6 +183,7 @@
   text-transform: uppercase;
   border-bottom: 2px solid var(--rosa);
   box-shadow: 0.5px 0px 12px 0px rgba(255, 1, 126, 0.2);
+  margin-bottom: 2em;
 }
 
 .category button:hover {
@@ -200,52 +206,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 5em;
   flex-wrap: wrap;
-  width: 100%;
-  height: 75em;
-  max-height: 100%;
-  overflow-y: hidden;
-  position: relative;
-  gap: 3em;
-}
-
-.Biquinis {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 4em;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 70em;
-  max-height: 100%;
-  overflow-y: hidden;
-  position: relative;
-  gap: 3em;
-}
-
-.maios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 3em;
-  gap: 3em;
   width: 100%;
   height: 100%;
-}
-
-.saidaPraia {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 3em;
-  gap: 3em;
-  width: 100%;
-  height: 100%;
+  gap: 3em 3em;
+  overflow-y: hidden;
 }
 
 .card {
@@ -310,20 +275,21 @@
   font-weight: 700;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
+.modal-div {
+  display: none;
 }
 
 .product-shop {
   display: flex;
+  position: absolute;
+  margin: 5em 5em;
   flex-direction: row;
   width: 85%;
   height: 50rem;
   gap: 5rem;
   border: none;
   border-radius: 2em;
-  box-shadow: 1px 1px 35px 10px rgba(255, 1, 126,0.1);
+  box-shadow: 1px 1px 35px 10px rgba(255, 1, 126, 0.1);
   border-bottom: 3px solid rgba(255, 1, 126, 0.5);
   border-top: 3px solid rgba(255, 1, 126, 0.5);
 }
@@ -356,24 +322,24 @@
 }
 
 .description img {
-  height: 5em;
-  width: 5em;
+  height: 5rem;
+  width: 5rem;
   object-fit: cover;
-  margin-top: 3em;
-  margin-right: 2em;
+  margin-top: 3rem;
+  margin-right: 2rem;
 }
 
-.description img:hover{
+.description img:hover {
   border: 1px solid rgba(255, 1, 126, 1);
 }
 
-.tamanhos{
+.tamanhos {
   display: flex;
   flex-direction: row;
   gap: 2em;
 }
 
-.tamanhos h2{
+.tamanhos h2 {
   font-size: 1.8em;
   text-align: center;
   width: 1.5em;
@@ -382,19 +348,20 @@
   cursor: pointer;
 }
 
-.tamanhos h2:hover{
+.tamanhos h2:hover {
   background-color: var(--rosa);
   color: white;
 }
 
-.description button{
+.description-button {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 3em;
   height: 3em;
+  min-height: 1.5em;
   width: 14em;
+  min-width: 7em;
   background-color: white;
   color: var(--rosa);
   border-radius: 15px;
@@ -407,7 +374,136 @@
   box-shadow: 0.5px 0px 12px 0px rgba(255, 1, 126, 0.2);
 }
 
-.description button:hover{
+.bt-close {
+  position: absolute;
+  margin-left: 38em;
+  margin-bottom: 20em;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50%;
+  border: 2px solid var(--rosa);
+  color: var(--rosa);
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+
+.description button:hover {
   background-color: var(--rosa);
   color: white;
+}
+
+#price {
+  font-weight: 100;
+  font-size: 4em;
+  margin: 0;
+}
+
+#description-text {
+  margin: 0;
+  color: var(--rosa)
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 10rem;
+  position: relative;
+  background-color: var(--amarelo);
+  padding: 1rem;
+  gap: 24em;
+  margin-top: 5em;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.instagram img {
+  width: 2em;
+}
+
+@media (max-width: 800px) {
+  .mid {
+    height: 140em;
+  }
+}
+
+@media (max-width: 1600px) {
+
+  .mid {
+    height: 110em;
+  }
+
+  .cardCategory {
+    overflow-y: hidden;
+    gap: 3em 2em;
+  }
+
+  #slide {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 20vh;
+    overflow-y: hidden;
+  }
+
+  #slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+  }
+
+  #slide img.imgfocus {
+    opacity: 1;
+    object-fit: cover;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 10rem;
+    position: relative;
+    background-color: var(--amarelo);
+    padding: 1rem;
+    margin-top: 5em;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .instagram {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+
+  .instagram img {
+    width: 2em;
+  }
 }

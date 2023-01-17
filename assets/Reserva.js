@@ -176,3 +176,43 @@ function reservar(){
         renderProducts(saida)
 }
 */
+
+function renderShop(product) {
+    let listProducts = '';
+    let index = '';
+
+    let selecionado = biquini.find(e => e.id = product.id)
+    console.log(selecionado.imgs[0].endereço)
+
+    listProducts += `<div class="product-shop">
+            <aside class="img-product-shop">
+                <img src="${selecionado.imgs[0].endereço}" alt="">
+             </aside>
+    
+            <aside class="description">
+                <button class="bt-close"> X </button>
+                <h1>${selecionado.name}</h1>
+                <nav class="tamanhos">
+                    <h2>P</h2>
+                    <h2>M</h2>
+                    <h2>G</h2>
+                </nav>
+    
+            <img id="img-shop-one" src="${selecionado.imgs[0].endereço}" alt="">
+            <img id="img-shop-two" src="${selecionado.imgs[0].endereço}" alt="">
+            <img id="img-shop-three" src="${selecionado.imgs[0].endereço}" alt="">
+    
+                <h2 id="price">R$ 95,00</h2>
+                <p id="description-text"> ou em ate 3x sem juros</p>
+                <button class="description-button">Comprar</button>
+             </aside>
+    </div>`
+
+    corpo.innerHTML = listProducts;
+    let modal = document.querySelector('.product-shop')
+    modal.style.display = "flex";
+
+    let btClose = document.querySelector('.bt-close')
+    console.log(btClose)
+    btClose.addEventListener("click", function () { closeModal() });
+}

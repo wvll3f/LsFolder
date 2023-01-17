@@ -12,6 +12,33 @@
 </head>
 
 <body>
+
+    <div class="modal-div">
+        <div class="product-shop">
+            <aside class="img-product-shop">
+                <img id="imgPrincipal" src="${selecionado.imgs[0].endereço}" alt="">
+            </aside>
+
+            <aside class="description">
+                <button class="bt-close"> X </button>
+                <h1 id="nome">${selecionado.name}</h1>
+                <nav class="tamanhos">
+                    <h2>P</h2>
+                    <h2>M</h2>
+                    <h2>G</h2>
+                </nav>
+
+                <img id="img-shop-one" src="${selecionado.imgs[0].endereço}" alt="">
+                <img id="img-shop-two" src="${selecionado.imgs[0].endereço}" alt="">
+                <img id="img-shop-three" src="${selecionado.imgs[0].endereço}" alt="">
+
+                <h2 id="price">R$ 95,00</h2>
+                <p id="description-text"> ou em ate 3x sem juros</p>
+                <button class="description-button">Comprar</button>
+            </aside>
+        </div>
+    </div>
+
     <div class="main">
 
         <div class="header">
@@ -29,7 +56,6 @@
 
         </div>
 
-
         <div class="mid-head">
 
             <div id="slide">
@@ -42,46 +68,38 @@
                 <button id="left">&lt;</button>
                 <button id="right">&gt;</button>
             </div>
-
             <hr>
-            <div class="mid">
-                <div class="products">
+        </div>
 
-                    <div class="category">
-                        <button id="biq">Biquínis</button>
-                        <button id="mai">Maiôs</button>
-                        <button id="sai">Saida de praia</button>
-                    </div>
+        <div class="mid">
 
-                    <div class="cardCategory">
+            <div class="category">
+                <button id="biq">Biquínis</button>
+                <button id="mai">Maiôs</button>
+                <button id="sai">Saida de praia</button>
+            </div>
 
-
-                    </div>
-
+            <div class="products">
+                <div class="cardCategory">
                 </div>
             </div>
-            <div class="footer">
-                <div class="product-shop">
+        </div>
 
-                    <aside class="img-product-shop">
-                        <img src="./images/b1.webp" alt="">
-                    </aside>
-
-                    <aside class="description">
-                        <h1>Biquini Jana</h1>
-                        <nav class="tamanhos">
-                            <h2>P</h2>
-                            <h2>M</h2>
-                            <h2>G</h2>
-                        </nav>
-                        <img src="./images/b1.webp" alt="">
-                        <img src="./images/b2.webp" alt="">
-                        <img src="./images/b3.webp" alt="">
-                        <button>Comprar</button>
-                    </aside>
-
+        <div class="footer">
+            <aside class="left">
+                <h3>Entre em contato conosco</h3>
+                <p>(71)9 999-9999</p>
+                <p>nome@email.com</p>
+            </aside>
+            <aside class="right">
+                <h3>Redes sociais</h3>
+                <div class="instagram">
+                    <img src="./images/InstagramIcon.png" alt="">
+                    <p>Instagram</p>
                 </div>
-            </div>
+            </aside>
+        </div>
+    </div>
 </body>
 
 </html>
