@@ -9,7 +9,7 @@ We use JavaScript and CSS to create interactive modals that allow users to selec
 
 <h1>Tools Used</h1>
 <ul>
-    <liJavaScript for dynamic rendering and interactive modals</li>
+    <li>JavaScript for dynamic rendering and interactive modals</li>
     <li>HTML for structure of the website</li>
     <li>CSS for styling</li>
 </ul>
