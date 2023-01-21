@@ -1,3 +1,5 @@
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/100314261/213866033-7c5cea2d-627f-4dde-a0a9-728bb862749a.gif)
+
 <h1>Welcome to our Simple Website</h1>
 This website is built using only JavaScript, HTML, and CSS. It is designed to showcase a dynamic rendering of products for display and selection of different objects for visualization through interactive modals.
 
